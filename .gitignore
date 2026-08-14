@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+.tools/
+node_modules/
+dist/
+output/
+*.partial.mp4
