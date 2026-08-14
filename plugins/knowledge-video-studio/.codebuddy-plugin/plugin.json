@@ -1,0 +1,35 @@
+{
+  "name": "knowledge-video-studio",
+  "version": "1.1.0",
+  "description": "知识视频总导演：读取脚本，自动匹配版权安全素材，并按语义选择 HyperFrames、Remotion 或编辑纸拼贴动画，最后装配、字幕和版权审计。",
+  "author": {
+    "name": "Knowledge Video Studio Contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "knowledge-video",
+    "script-to-video",
+    "stock-footage",
+    "hyperframes",
+    "remotion",
+    "editorial-collage",
+    "copyright-audit"
+  ],
+  "category": "视频创作",
+  "commands": "./commands",
+  "agents": "./agents",
+  "skills": "./skills",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": {
+    "knowledge_video_media": {
+      "command": "python3",
+      "args": [
+        "${CODEBUDDY_PLUGIN_ROOT}/mcp/media_server.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      },
+      "defer_loading": true
+    }
+  }
+}
