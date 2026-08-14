@@ -1,0 +1,23 @@
+{
+  "name": "knowledge-video-studio-marketplace",
+  "description": "面向知识类创作者的脚本驱动视频制作套件市场。",
+  "owner": {
+    "name": "Knowledge Video Studio Contributors"
+  },
+  "metadata": {
+    "version": "1.1.0"
+  },
+  "plugins": [
+    {
+      "name": "knowledge-video-studio",
+      "description": "按脚本逐段选择版权安全素材、HyperFrames、Remotion 或编辑纸拼贴动画，并完成装配和版权审计。",
+      "source": "./plugins/knowledge-video-studio",
+      "version": "1.1.0",
+      "category": "video-production",
+      "author": {
+        "name": "Knowledge Video Studio Contributors"
+      },
+      "license": "MIT"
+    }
+  ]
+}
