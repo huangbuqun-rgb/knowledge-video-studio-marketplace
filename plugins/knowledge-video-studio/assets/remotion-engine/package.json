@@ -1,0 +1,16 @@
+{
+  "name": "knowledge-video-remotion-segment",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx KnowledgeSegment out/segment.mp4 --props public/segment.json",
+    "still": "remotion still src/index.jsx KnowledgeSegment out/hero.png --props public/segment.json"
+  },
+  "dependencies": {
+    "@remotion/cli": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "remotion": "latest"
+  }
+}
