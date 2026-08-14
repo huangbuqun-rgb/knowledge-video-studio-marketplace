@@ -1,0 +1,16 @@
+{
+  "standard": {
+    "description": "完成基本时间线、素材来源、渲染和交付校验。"
+  },
+  "editorial-premium": {
+    "description": "适合公开发布的知识短片：单条连续旁白、跨镜头视觉母题、一个重点高潮、证据角色标注和强制联系表复核。",
+    "minimum_compliance_score": 85,
+    "mandarin_chars_per_second": [4.2, 5.2],
+    "ordinary_pause_max_seconds": 0.9,
+    "maximum_renderer_switches_per_minute": 6,
+    "music_below_voice_db": 18,
+    "recommended_music_volume": 0.06,
+    "maximum_sfx_per_40_seconds": 3,
+    "contact_sheet_frames": 8
+  }
+}
