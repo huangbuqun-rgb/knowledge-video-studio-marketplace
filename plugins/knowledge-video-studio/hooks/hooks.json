@@ -1,0 +1,18 @@
+{
+  "description": "Knowledge Video Studio artifact validation hooks",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CODEBUDDY_PLUGIN_ROOT}/scripts/post_write_validate.py\"",
+            "description": "写入视频计划或素材账本后立即做轻量校验",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
