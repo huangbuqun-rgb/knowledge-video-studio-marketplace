@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "title": "为什么复利一开始看起来很慢",
+    "script_path": "source/script.md",
+    "language": "zh-CN",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "duration": 18.0,
+    "quality_profile": "editorial-premium",
+    "hero_scene_id": "s003",
+    "voice_strategy": {
+      "one_take": true,
+      "speaker": "single-creator-voice",
+      "direction": "自然、清晰、像创作者面对镜头解释，不使用播音腔",
+      "target_chars_per_second": [4.2, 5.2]
+    },
+    "audio_strategy": {
+      "voice_target_lufs": -16,
+      "bgm_below_voice_db": 22,
+      "sfx_max_per_40s": 3
+    },
+    "visual_system": {
+      "palette": ["#101418", "#F4E7C5", "#E6573F", "#67B7A7"],
+      "typefaces": ["Noto Sans SC", "Inter"],
+      "motion_character": "克制、清晰、纸张质感只出现在转折",
+      "anchor": {
+        "id": "compound-curve",
+        "description": "同一条复利曲线在硬币、时间轴、反馈回路和图表之间持续变形",
+        "continuity_strategy": "相邻镜头通过曲线形状和相同强调色进行匹配切换"
+      }
+    }
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 4.0,
+      "narration": "复利最反直觉的地方，是前半段几乎看不出变化。",
+      "intent": "hook",
+      "visual_anchor_id": "compound-curve",
+      "evidence_role": "mechanism",
+      "visual_mode": "remotion",
+      "reason": "用强烈尺度反差建立钩子，不需要伪造实拍证据。",
+      "render": {"brief": "小硬币被巨大时间轴压在画面左侧，右侧曲线尚未抬头。", "preset": "paper-hook"},
+      "transition": "cut",
+      "status": "planned",
+      "fact_check": [],
+      "risk_flags": []
+    },
+    {
+      "id": "s002",
+      "start": 4.0,
+      "end": 8.0,
+      "narration": "现实里，你看到的常常只是每月重复存下一点钱。",
+      "intent": "literal-example",
+      "visual_anchor_id": "compound-curve",
+      "evidence_role": "context",
+      "visual_mode": "remotion",
+      "reason": "现实行为适合用可观察的实拍动作。",
+      "media": {"queries": ["person saving coins monthly", "budget notebook hands", "deposit money jar"], "selected_asset_id": null, "usage": "full-frame b-roll"},
+      "render": {"brief": "沿用同一条复利曲线作为遮罩，把每月存钱的动作抽象为重复进入曲线的硬币。", "preset": "curve-deposit-loop"},
+      "transition": "cut",
+      "status": "planned",
+      "fact_check": [],
+      "risk_flags": ["recognizable-person-review"]
+    },
+    {
+      "id": "s003",
+      "start": 8.0,
+      "end": 13.0,
+      "narration": "但每一期的收益，也会加入下一期的本金。",
+      "intent": "mechanism",
+      "visual_anchor_id": "compound-curve",
+      "evidence_role": "mechanism",
+      "visual_mode": "remotion",
+      "reason": "需要解释本金和收益回流的关系。",
+      "render": {"brief": "本金节点产生收益节点，收益沿回路并回本金，三轮后回路加速。", "preset": "feedback-loop"},
+      "transition": "match_cut",
+      "status": "planned",
+      "fact_check": [],
+      "risk_flags": []
+    },
+    {
+      "id": "s004",
+      "start": 13.0,
+      "end": 18.0,
+      "narration": "时间越长，新增部分占总量的比例就越高。",
+      "intent": "quantified-payoff",
+      "visual_anchor_id": "compound-curve",
+      "evidence_role": "evidence",
+      "visual_mode": "remotion",
+      "reason": "参数化堆叠柱能准确显示本金与收益占比变化。",
+      "render": {"brief": "四根堆叠柱按年份增长，强调收益部分占比。", "preset": "bar-chart", "data": {"labels": ["第1年", "第5年", "第10年", "第20年"], "values": [1, 1.3, 2.0, 4.1]}},
+      "transition": "fade",
+      "status": "planned",
+      "fact_check": ["values-are-illustrative-unless-source-provided"],
+      "risk_flags": []
+    }
+  ]
+}
